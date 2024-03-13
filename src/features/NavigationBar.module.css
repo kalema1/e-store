@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  list-style: none;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.navLink {
+  text-decoration: none;
+}

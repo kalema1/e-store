@@ -1,3 +1,9 @@
+import Header from "../features/Header";
+
 export default function About() {
-  return <div>About</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
