@@ -10,7 +10,7 @@ export default function NavigationBar() {
         </NavLink>
       </li>
       <li>
-        <NavLink className={styles.navLink} to="/product">
+        <NavLink className={styles.navLink} to="/products">
           Products
         </NavLink>
       </li>
