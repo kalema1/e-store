@@ -9,4 +9,11 @@
 
 .navLink {
   text-decoration: none;
+  color: var(--color--brand-light);
+  transition: 0.3;
+}
+
+.navLink:hover,
+.navLink:global(.active) {
+  color: var(--color--brand-1);
 }
