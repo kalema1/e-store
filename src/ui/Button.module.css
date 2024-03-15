@@ -1,0 +1,21 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color--brand-1);
+  color: var(--color--brand-1);
+  padding: 0.8rem 1.2rem;
+  background-color: inherit;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: var(--color--bg-black);
+  color: var(--color--brand-2);
+}
+
+.button:hover :global(.icon) {
+  stroke: var(--color--brand-2);
+}

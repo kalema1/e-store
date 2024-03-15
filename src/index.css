@@ -2,6 +2,8 @@
 
 :root {
   --color--brand-1: #333;
+  --color--bg-black: black;
+  --color--brand-2: white;
 }
 
 html {

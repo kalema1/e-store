@@ -1,0 +1,13 @@
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 1rem 2rem;
+  background-color: inherit;
+  border-radius: 2rem;
+}
+
+.headerIcon {
+  stroke: var(--color--brand-1);
+  margin-right: 4px;
+  transition: 0.3s;
+}
