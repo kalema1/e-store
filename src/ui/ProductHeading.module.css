@@ -1,0 +1,10 @@
+.productHeadingContainer {
+  margin: 7.4rem;
+  text-align: center;
+}
+
+.productHeading {
+  padding: 4rem 0;
+  border-bottom: 1.5px solid #999;
+  font-size: 4rem;
+}
