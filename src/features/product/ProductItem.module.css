@@ -1,0 +1,29 @@
+.listItem {
+  padding: 2rem;
+  border: 1.5px solid var(--color--bdr-light);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.listItemImage {
+  width: 100%;
+}
+
+.listItemTitle {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.listItemPrice {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.listItemButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
