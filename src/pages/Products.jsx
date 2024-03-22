@@ -1,3 +1,10 @@
+import Header from "../features/Header";
+
 export default function Products() {
-  return <div>Products</div>;
+  return (
+    <div>
+      <Header />
+      <p>Products</p>
+    </div>
+  );
 }

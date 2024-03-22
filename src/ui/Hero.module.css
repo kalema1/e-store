@@ -1,0 +1,24 @@
+.heroSection {
+  background: var(--color--brand-purple);
+  height: 100vh;
+  position: relative;
+}
+
+.heroHeadingContainer {
+  position: absolute;
+  top: 40%;
+}
+
+.heroHeading {
+  font-size: 7.2rem;
+  color: var(--color--brand-2);
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.heroSubHeading {
+  font-size: 5.2rem;
+  color: var(--color--brand-2);
+  font-weight: 400;
+  margin-bottom: 3rem;
+}

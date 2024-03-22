@@ -3,6 +3,7 @@
 :root {
   --color--brand-1: #333;
   --color--brand-light: #777;
+  --color--brand-purple: #c084fc;
   --color--bg-black: black;
   --color--brand-2: white;
 }
@@ -26,5 +27,5 @@ html {
   padding: 0 2rem;
 }
 .header-section {
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
