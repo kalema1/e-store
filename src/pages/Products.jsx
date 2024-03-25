@@ -1,4 +1,5 @@
 import Header from "../features/Header";
+import ProductList from "../features/product/ProductList";
 import ProductHeading from "../ui/ProductHeading";
 
 export default function Products() {
@@ -6,7 +7,7 @@ export default function Products() {
     <div>
       <Header />
       <ProductHeading />
-      <p>Products</p>
+      <ProductList />
     </div>
   );
 }
