@@ -6,3 +6,10 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 3.2rem;
 }
+
+.error {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color--red-600);
+  font-weight: 500;
+}

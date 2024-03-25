@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import ProductItem from "./ProductItem";
 import styles from "./ProductList.module.css";
 import { getProducts } from "../../services/apiStore";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 export default function ProductList() {
   // access the data
@@ -15,11 +16,11 @@ export default function ProductList() {
   });
 
   if (isLoading) {
-    return <div>Loading.....</div>;
+    return <LoadingSpinner />;
   }
 
   if (isError) {
-    return <div>products could not be fetched</div>;
+    return <div className={styles.error}>products could not be fetched💀</div>;
   }
 
   return (
