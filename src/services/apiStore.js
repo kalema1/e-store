@@ -20,7 +20,7 @@ export async function getProducts() {
  * @param {number} ID number to be selected
  */
 
-export async function getroductDetails(id) {
+export async function getProductDetails(id) {
   const DETAILS_API_URL = API_URL + String(id);
   const response = await fetch(DETAILS_API_URL);
 
