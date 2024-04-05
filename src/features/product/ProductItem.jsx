@@ -4,7 +4,7 @@ import styles from "./ProductItem.module.css";
 export default function ProductItem({ product }) {
   const text = product.title;
   const INDICE = 14;
-  const partOfTitle = text.slice(0, INDICE);
+  const partOfTitle = text.slice(0, INDICE).trim();
   return (
     <li className={styles.listItem}>
       <img
