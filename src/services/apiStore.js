@@ -14,3 +14,17 @@ export async function getProducts() {
   const data = await response.json();
   return data;
 }
+
+/**
+ * get a single product by ID
+ * @param {number} ID number to be selected
+ */
+
+export async function getroductDetails(id) {
+  const DETAILS_API_URL = API_URL + String(id);
+  const response = await fetch(DETAILS_API_URL);
+
+  if (!response.ok) {
+    throw new Error("failed getting product details");
+  }
+}
