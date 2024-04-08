@@ -21,10 +21,13 @@ export async function getProducts() {
  */
 
 export async function getProductDetails(id) {
-  const DETAILS_API_URL = API_URL + String(id);
+  const DETAILS_API_URL = `${API_URL}/${id}`;
   const response = await fetch(DETAILS_API_URL);
 
   if (!response.ok) {
     throw new Error("failed getting product details");
   }
+
+  const data = await response.json();
+  return data;
 }

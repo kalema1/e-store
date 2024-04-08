@@ -20,7 +20,7 @@ export default function ProductList() {
   }
 
   if (isError) {
-    return <div className={styles.error}>products could not be fetched💀</div>;
+    return <div className={styles.error}>products could not be fetched⛔</div>;
   }
 
   return (
