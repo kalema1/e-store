@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../ui/Button";
 import styles from "./ProductItem.module.css";
 
@@ -15,7 +16,9 @@ export default function ProductItem({ product }) {
       <p className={styles.listItemTitle}>{partOfTitle}...</p>
       <p className={styles.listItemPrice}>${product.price}</p>
       <div className={styles.listItemButtonContainer}>
-        <Button>Buy Now</Button>
+        <Link className={styles.buyNow} to="">
+          <Button>Buy Now</Button>
+        </Link>
       </div>
     </li>
   );
