@@ -2,8 +2,15 @@
   padding: 2rem 2rem 0 2rem;
   border: 1.5px solid var(--color--bdr-light);
   border-radius: 1rem;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
   list-style: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.listItem:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+  border: none;
 }
 
 .listItemImage {
