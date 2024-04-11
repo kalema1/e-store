@@ -1,9 +1,33 @@
+import { useQuery } from "@tanstack/react-query";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 import Button from "../../ui/Button";
 import styles from "./ProductDetails.module.css";
 import Header from "../Header";
+import { getProductDetails } from "../../services/apiStore";
+import LoadingSpinner from "../../ui/LoadingSpinner";
 
 export default function ProductDetails() {
+  const { title, id } = useParams();
+  console.log({ title, id });
+  // access data
+  const {
+    data: productDetails,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["productDetails"],
+    queryFn: () => getProductDetails(id),
+  });
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (isError) {
+    return <h1>Failed gettting product details</h1>;
+  }
   return (
     <>
       <Header />
@@ -13,24 +37,20 @@ export default function ProductDetails() {
             <div>
               <img
                 className={styles.img}
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-                alt="mens"
+                src={productDetails.image}
+                alt={productDetails.title}
               />
             </div>
             <div className={styles.productdetails}>
-              <p className={styles.category}>MENS CLOTHING</p>
-              <h2 className={styles.title}>
-                Fjallraven - Foldsack No.1 Backpack, Fits 15 laptops
-              </h2>
+              <p className={styles.category}>{productDetails.category}</p>
+              <h2 className={styles.title}>{productDetails.title}</h2>
               <p className={styles.rating}>
-                Rating 3.9 <span className={styles.star}>⭐</span>
+                Rating {productDetails.rating.rate}/{" "}
+                {productDetails.rating.count}
+                <span className={styles.star}>⭐</span>
               </p>
-              <p className={styles.price}>$ 109.05</p>
-              <p className={styles.description}>
-                Your perfect pack for everyday use and walks in the forest.
-                Stash your laptop (up to 15 inches) in the padded sleeve, your
-                everyday
-              </p>
+              <p className={styles.price}>$ {productDetails.price}</p>
+              <p className={styles.description}>{productDetails.description}</p>
               <div className={styles.btnContainer}>
                 <Button>Add to Cart</Button>
                 <Link className={styles.link} to="/cart">

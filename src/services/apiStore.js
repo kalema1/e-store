@@ -17,11 +17,11 @@ export async function getProducts() {
 
 /**
  * get a single product by ID
- * @param {number} ID number to be selected
+ * @param {number} productId number to be selected
  */
 
-export async function getProductDetails(id) {
-  const DETAILS_API_URL = `${API_URL}/${id}`;
+export async function getProductDetails(productId) {
+  const DETAILS_API_URL = `${API_URL}/${productId}`;
   const response = await fetch(DETAILS_API_URL);
 
   if (!response.ok) {
