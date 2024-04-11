@@ -45,8 +45,7 @@ export default function ProductDetails() {
               <p className={styles.category}>{productDetails.category}</p>
               <h2 className={styles.title}>{productDetails.title}</h2>
               <p className={styles.rating}>
-                Rating {productDetails.rating.rate}/{" "}
-                {productDetails.rating.count}
+                Rating {productDetails.rating.rate}
                 <span className={styles.star}>⭐</span>
               </p>
               <p className={styles.price}>$ {productDetails.price}</p>
