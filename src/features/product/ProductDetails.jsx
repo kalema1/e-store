@@ -17,7 +17,7 @@ export default function ProductDetails() {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["productDetails"],
+    queryKey: ["productDetails", id],
     queryFn: () => getProductDetails(id),
   });
 
