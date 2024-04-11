@@ -9,8 +9,8 @@ import { getProductDetails } from "../../services/apiStore";
 import LoadingSpinner from "../../ui/LoadingSpinner";
 
 export default function ProductDetails() {
-  const { title, id } = useParams();
-  console.log({ title, id });
+  const { id } = useParams();
+
   // access data
   const {
     data: productDetails,
