@@ -9,7 +9,7 @@ export default function ProductItem({ product }) {
 
   const title = product.title;
   const titleWithNoSpace = title.replaceAll(" ", "");
-  console.log(titleWithNoSpace);
+
   return (
     <li className={styles.listItem}>
       <img
