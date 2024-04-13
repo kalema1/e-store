@@ -1,6 +1,6 @@
 import Button from "../../ui/Button";
 
-export default function UpdateCartItem() {
+export default function UpdateCartItemQuantity() {
   return (
     <div>
       <Button>-</Button>

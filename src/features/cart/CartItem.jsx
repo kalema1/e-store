@@ -1,4 +1,4 @@
-import UpdateCartItem from "./UpdateCartItem";
+import UpdateCartItemQuantity from "./UpdateCartItemQuantity";
 
 export default function CartItem({ Product }) {
   return (
@@ -8,7 +8,7 @@ export default function CartItem({ Product }) {
       </div>
       <div>
         <h2>{Product.title}</h2>
-        <UpdateCartItem />
+        <UpdateCartItemQuantity />
       </div>
     </li>
   );
