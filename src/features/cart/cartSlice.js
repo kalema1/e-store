@@ -1,24 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  //cart: [],
-  cart: [
-    {
-      id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      quantity: 2,
-      totalPrice: 219.9,
-    },
-
-    {
-      id: 2,
-      title: "Mens Casual Premium Slim Fit T-Shirts",
-      price: 22.3,
-      quantity: 3,
-      totalPrice: 66.9,
-    },
-  ],
+  cart: [],
 };
 
 const cartSlice = createSlice({
@@ -69,3 +52,6 @@ export const {
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
+
+export const getTotalCartQuantity = (state) =>
+  state.cart.cart.reduce((sum, item) => sum + item.quantity, 0);

@@ -1,15 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import Button from "../../ui/Button";
 import styles from "./ProductDetails.module.css";
 import Header from "../Header";
 import { getProductDetails } from "../../services/apiStore";
 import LoadingSpinner from "../../ui/LoadingSpinner";
+import { addItem } from "../cart/cartSlice";
 
 export default function ProductDetails() {
   const { id } = useParams();
+  const dispatch = useDispatch();
 
   // access data
   const {
@@ -21,6 +24,13 @@ export default function ProductDetails() {
     queryFn: () => getProductDetails(id),
   });
 
+  function handleAddToCart() {
+    const { id, title, price } = productDetails;
+
+    const newItem = { id, title, price, quantity: 1, totalPrice: price * 1 };
+    dispatch(addItem(newItem));
+  }
+
   if (isLoading) {
     return <LoadingSpinner />;
   }
@@ -28,6 +38,7 @@ export default function ProductDetails() {
   if (isError) {
     return <h1>Failed gettting product details</h1>;
   }
+
   return (
     <>
       <Header />
@@ -51,7 +62,7 @@ export default function ProductDetails() {
               <p className={styles.price}>$ {productDetails.price}</p>
               <p className={styles.description}>{productDetails.description}</p>
               <div className={styles.btnContainer}>
-                <Button>Add to Cart</Button>
+                <Button onClick={handleAddToCart}>Add to Cart</Button>
                 <Link className={styles.link} to="/cart">
                   <Button>Go to Cart</Button>
                 </Link>

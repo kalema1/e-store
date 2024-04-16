@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import Button from "../ui/Button";
 import styles from "./HeaderButtons.module.css";
 import { FiLogIn, FiUserPlus, FiShoppingCart } from "react-icons/fi";
+import { getTotalCartQuantity } from "./cart/cartSlice";
 
 export default function HeaderButtons() {
+  const totalCartQuantity = useSelector(getTotalCartQuantity);
+
   return (
     <div className={styles.headerButtons}>
       <Button>
@@ -15,7 +19,7 @@ export default function HeaderButtons() {
       </Button>
       <Button>
         <FiShoppingCart className={`icon ${styles.headerIcon}`} />
-        Cart (X)
+        Cart {totalCartQuantity > 0 ? "(" + totalCartQuantity + ")" : ""}
       </Button>
     </div>
   );
