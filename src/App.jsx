@@ -31,7 +31,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="cart" element={<Cart />} />
           <Route path="login" element={<Login />} />
-          <Route path="register" element={<SignUp />} />
+          <Route path="signup" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>

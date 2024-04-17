@@ -17,7 +17,7 @@ export default function HeaderButtons() {
         </Button>
       </Link>
 
-      <Link to="signup" className={styles.linkNav}>
+      <Link to="/signup" className={styles.linkNav}>
         <Button>
           <FiUserPlus className={` icon ${styles.headerIcon}`} />
           Register
