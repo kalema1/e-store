@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
 import ProductDetails from "./features/product/ProductDetails";
+import Cart from "./pages/Cart";
 
 //create a place where data leaves
 const queryClient = new QueryClient({
@@ -28,6 +29,7 @@ export default function App() {
           <Route path=":title/:id" element={<ProductDetails />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />

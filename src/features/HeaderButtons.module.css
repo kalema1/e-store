@@ -11,3 +11,7 @@
   margin-right: 4px;
   transition: 0.3s;
 }
+
+.linkNav {
+  text-decoration: none;
+}
