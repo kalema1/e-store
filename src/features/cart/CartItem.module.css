@@ -1,0 +1,22 @@
+.cartItemContainer {
+  list-style: none;
+  height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.img {
+  width: 100%;
+}
+
+.title {
+  font-size: 4.4rem;
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+}
+
+.prices {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}

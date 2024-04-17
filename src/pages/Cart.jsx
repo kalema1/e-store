@@ -11,8 +11,8 @@ export default function Cart() {
       <div className="container">
         <div>
           <ul>
-            {cart.map((item) => (
-              <CartItem item={item} key={item.id} />
+            {cart.map((product) => (
+              <CartItem product={product} key={product.id} />
             ))}
           </ul>
         </div>
