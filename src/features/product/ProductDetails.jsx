@@ -25,9 +25,16 @@ export default function ProductDetails() {
   });
 
   function handleAddToCart() {
-    const { id, title, price } = productDetails;
+    const { id, title, price, image } = productDetails;
 
-    const newItem = { id, title, price, quantity: 1, totalPrice: price * 1 };
+    const newItem = {
+      id,
+      title,
+      price,
+      quantity: 1,
+      totalPrice: price * 1,
+      image,
+    };
     dispatch(addItem(newItem));
   }
 
