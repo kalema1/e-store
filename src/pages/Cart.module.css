@@ -15,3 +15,8 @@
   margin: 3rem 0;
   font-size: 2.4rem;
 }
+
+.clearCartContainer {
+  display: flex;
+  justify-content: end;
+}

@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import styles from "./Cart.module.css";
-import { getCart, getTotalPrice } from "../features/cart/cartSlice";
+import { clearCart, getCart, getTotalPrice } from "../features/cart/cartSlice";
 import CartItem from "../features/cart/CartItem";
 import Header from "../features/Header";
 import Button from "../ui/Button";
@@ -9,6 +9,14 @@ import Button from "../ui/Button";
 export default function Cart() {
   const cart = useSelector(getCart);
   const grandTotalPrice = useSelector(getTotalPrice);
+  const dispach = useDispatch();
+
+  /**
+   * clears items in the cart
+   */
+  function handleClearCart() {
+    dispach(clearCart());
+  }
 
   return (
     <>
@@ -21,6 +29,10 @@ export default function Cart() {
                 <CartItem product={product} key={product.id} />
               ))}
             </ul>
+          </div>
+
+          <div className={styles.clearCartContainer}>
+            <Button onClick={handleClearCart}>Clear Cart</Button>
           </div>
 
           <div className={styles.totalContainer}>
