@@ -1,0 +1,17 @@
+.emptyCartSection {
+  margin: 9.6rem 0;
+}
+
+.heading {
+  font-size: 3rem;
+  margin-bottom: 2.4rem;
+}
+
+.paragraph {
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.link {
+  text-decoration: none;
+}
