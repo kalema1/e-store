@@ -2,6 +2,12 @@
   margin: 9.6rem 0;
 }
 
+.emptyCartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .heading {
   font-size: 3rem;
   margin-bottom: 2.4rem;

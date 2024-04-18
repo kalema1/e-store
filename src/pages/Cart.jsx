@@ -5,17 +5,23 @@ import { clearCart, getCart, getTotalPrice } from "../features/cart/cartSlice";
 import CartItem from "../features/cart/CartItem";
 import Header from "../features/Header";
 import Button from "../ui/Button";
+import EmptyCart from "../features/cart/EmptyCart";
 
 export default function Cart() {
   const cart = useSelector(getCart);
   const grandTotalPrice = useSelector(getTotalPrice);
-  const dispach = useDispatch();
+  const isEmptyCart = cart.length === 0;
+  const dispatch = useDispatch();
 
   /**
    * clears items in the cart
    */
   function handleClearCart() {
-    dispach(clearCart());
+    dispatch(clearCart());
+  }
+
+  if (isEmptyCart) {
+    return <EmptyCart />;
   }
 
   return (

@@ -12,7 +12,7 @@ export default function EmptyCart() {
             Browse Our categories and discover the best deals!
           </p>
           <Link className={styles.link} to="/product">
-            <Button>START sHOPPING</Button>
+            <Button>START SHOPPING</Button>
           </Link>
         </div>
       </div>
