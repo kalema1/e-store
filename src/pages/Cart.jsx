@@ -4,6 +4,7 @@ import styles from "./Cart.module.css";
 import { getCart, getTotalPrice } from "../features/cart/cartSlice";
 import CartItem from "../features/cart/CartItem";
 import Header from "../features/Header";
+import Button from "../ui/Button";
 
 export default function Cart() {
   const cart = useSelector(getCart);
@@ -24,6 +25,9 @@ export default function Cart() {
 
           <div className={styles.totalContainer}>
             <div>Grand Total: ${grandTotalPrice.toFixed(2)}</div>
+            <div className={styles.checkoutContainer}>
+              <Button>PROCEED TO CHECKOUT</Button>
+            </div>
           </div>
         </div>
       </section>
