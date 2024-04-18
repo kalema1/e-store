@@ -22,8 +22,8 @@ export default function Cart() {
             </ul>
           </div>
 
-          <div>
-            <div>Grand Total: {grandTotalPrice.toFixed(2)}</div>
+          <div className={styles.totalContainer}>
+            <div>Grand Total: ${grandTotalPrice.toFixed(2)}</div>
           </div>
         </div>
       </section>
