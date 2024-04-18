@@ -8,6 +8,15 @@
   align-items: center;
 }
 
+.imgContainer {
+  width: 8vw;
+  margin-bottom: 2.4rem;
+}
+
+.img {
+  width: 100%;
+}
+
 .heading {
   font-size: 3rem;
   margin-bottom: 2.4rem;
