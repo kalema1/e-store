@@ -12,9 +12,9 @@ export default function CartItem({ product }) {
       <div>
         <div>
           <h2 className={styles.title}>{product.title}</h2>
-          <p
-            className={styles.prices}
-          >{`${product.quantity} X  ${product.price} = ${totalPrice}`}</p>
+          <p className={styles.prices}>{`${product.quantity} X  ${
+            product.price
+          } = ${totalPrice.toFixed(2)}`}</p>
           <div className={styles.buttonContainer}>
             <UpdateCartItemQuantity />
           </div>

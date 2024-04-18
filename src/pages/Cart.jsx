@@ -1,12 +1,13 @@
 import { useSelector } from "react-redux";
 
 import styles from "./Cart.module.css";
-import { getCart } from "../features/cart/cartSlice";
+import { getCart, getTotalPrice } from "../features/cart/cartSlice";
 import CartItem from "../features/cart/CartItem";
 import Header from "../features/Header";
 
 export default function Cart() {
   const cart = useSelector(getCart);
+  const grandTotalPrice = useSelector(getTotalPrice);
 
   return (
     <>
@@ -19,6 +20,10 @@ export default function Cart() {
                 <CartItem product={product} key={product.id} />
               ))}
             </ul>
+          </div>
+
+          <div>
+            <div>Grand Total: {grandTotalPrice.toFixed(2)}</div>
           </div>
         </div>
       </section>
