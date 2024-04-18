@@ -10,6 +10,7 @@
   --color--bdr-light-0: #f3f3f3;
   --color--red-600: #dc2626;
   --color--rating: #eab308;
+  --font--family-primary: "Roboto", sans-serif;
 }
 
 html {
@@ -21,7 +22,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   line-height: 1.2;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font--family-primary);
   color: var(--color--brand-1);
 }
 

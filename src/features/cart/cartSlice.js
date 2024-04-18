@@ -23,7 +23,7 @@ const cartSlice = createSlice({
       state.cart.push(action.payload);
     },
 
-    deleteitem(state, action) {
+    deleteItem(state, action) {
       // payload = product ID
       // find the product with that ID and then delete it
       state.cart = state.cart.filter(
@@ -58,7 +58,7 @@ export const {
   addItem,
   increeaseItemQuantity,
   decreaseItemQuantity,
-  deleteitem,
+  deleteItem,
   clearCart,
 } = cartSlice.actions;
 

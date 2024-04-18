@@ -25,3 +25,36 @@
   font-weight: 500;
   margin-bottom: 2.4rem;
 }
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 12.8rem;
+}
+
+.delete {
+  font-size: 2.4rem;
+  cursor: pointer;
+  stroke: var(--color--red-600);
+  transition: 0.3s;
+}
+.delete:hover {
+  transform: scale(1.05);
+}
+
+.deleteContainer:hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.deleteContainer:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--color--red-600);
+  font-family: var(--font--family-primary);
+  font-size: 1.4rem;
+  padding: 5px;
+  z-index: 10;
+}
