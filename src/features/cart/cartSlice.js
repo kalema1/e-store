@@ -10,8 +10,19 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       // payload = new item
+      // find that product and then mutate the quantity on that product
+      const existingProduct = state.cart.find(
+        (product) => product.id === action.payload.id
+      );
+
+      if (existingProduct) {
+        existingProduct.quantity++;
+        return;
+      }
+
       state.cart.push(action.payload);
     },
+
     deleteitem(state, action) {
       // payload = product ID
       // find the product with that ID and then delete it
