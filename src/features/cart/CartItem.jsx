@@ -27,7 +27,7 @@ export default function CartItem({ product }) {
             product.price
           } = ${totalPrice.toFixed(2)}`}</p>
           <div className={styles.buttonContainer}>
-            <UpdateCartItemQuantity />
+            <UpdateCartItemQuantity productId={product.id} />
             <div
               className={styles.deleteContainer}
               data-title="delete"
