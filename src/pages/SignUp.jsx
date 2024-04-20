@@ -1,3 +1,5 @@
+import RegisterForm from "../features/user/RegisterForm";
+
 export default function SignUp() {
-  return <div>Sign up</div>;
+  return <RegisterForm />;
 }

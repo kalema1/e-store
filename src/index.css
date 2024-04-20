@@ -11,6 +11,7 @@
   --color--red-600: #dc2626;
   --color--rating: #eab308;
   --font--family-primary: "Roboto", sans-serif;
+  --box-shadow--primary: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
 }
 
 html {

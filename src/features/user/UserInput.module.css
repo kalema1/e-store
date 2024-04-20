@@ -1,0 +1,20 @@
+.inputContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.input {
+  flex-grow: 1;
+  padding-left: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow--primary);
+  height: 4.4rem;
+}
+
+.label {
+  font-size: 3rem;
+}
