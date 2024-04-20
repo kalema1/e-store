@@ -1,0 +1,19 @@
+.loginSection {
+  margin: 9.6rem 0;
+}
+
+.loginFormContainer {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.loginHeading {
+  font-size: 3.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
