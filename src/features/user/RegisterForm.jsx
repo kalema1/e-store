@@ -1,6 +1,7 @@
 import { FiUser, FiMail, FiLock, FiKey, FiPhone } from "react-icons/fi";
 import styles from "./RegisterForm.module.css";
 import UserInput from "./UserInput";
+import Button from "../../ui/Button";
 
 export default function RegisterForm() {
   return (
@@ -29,6 +30,10 @@ export default function RegisterForm() {
               <UserInput type="password" placeholder="Confirm Your Password">
                 <FiKey />
               </UserInput>
+
+              <div className={styles.btnContainer}>
+                <Button>Register</Button>
+              </div>
             </div>
           </form>
         </div>
